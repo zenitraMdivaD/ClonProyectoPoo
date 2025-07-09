@@ -1,6 +1,9 @@
 package kernel;
 
-public abstract class TipoMovimiento {
+import java.io.Serializable;
+
+public abstract class TipoMovimiento implements Serializable {
+	private static final long serialVersionUID = 1L;
 	private final String nombre;
 
 	protected TipoMovimiento(String nombre) {
@@ -12,24 +15,28 @@ public abstract class TipoMovimiento {
 	}
 
 	public static final class Deposito extends TipoMovimiento {
+		private static final long serialVersionUID = 1L;
 		public Deposito() {
 			super("DEPÓSITO");
 		}
 	}
 
 	public static final class Retiro extends TipoMovimiento {
+		private static final long serialVersionUID = 1L;
 		public Retiro() {
 			super("RETIRO");
 		}
 	}
 
 	public static final class TransferenciaEnviada extends TipoMovimiento {
+		private static final long serialVersionUID = 1L;
 		public TransferenciaEnviada() {
 			super("TRANSFERENCIA_ENVIADA");
 		}
 	}
 
 	public static final class TransferenciaRecibida extends TipoMovimiento {
+		private static final long serialVersionUID = 1L;
 		public TransferenciaRecibida() {
 			super("TRANSFERENCIA_RECIBIDA");
 		}

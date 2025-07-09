@@ -1,9 +1,11 @@
 package kernel;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class Movimiento {
+public class Movimiento implements Serializable{
+	private static final long serialVersionUID = 1L;
     private final TipoMovimiento tipo;
     private final double monto;
     private final LocalDateTime fechaHora;

@@ -1,5 +1,6 @@
 package kernel;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -14,7 +15,8 @@ import complementos.Excepciones.MontoInvalidoException;
 import complementos.Excepciones.SaldoInsuficienteException;
 import complementos.Excepciones.UsuarioNoEncontradoException;
 
-public class SistemaFinanciero {
+public class SistemaFinanciero implements Serializable{
+	private static final long serialVersionUID = 1L;
 	private Map<String, Usuario> usuarios;
 	private Map<String, Cuenta> cuentas;
 	private List<String> bitacora;

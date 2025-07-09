@@ -1,8 +1,10 @@
 package kernel;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Usuario {
+public class Usuario implements Serializable{
+	private static final long serialVersionUID = 1L;
 	private String documentoIdentidad;
 	private String nombreCompleto;
 	private String contrasena;
@@ -18,6 +20,34 @@ public class Usuario {
 		this.correoElectronico = correoElectronico;
 		this.telefono = telefono;
 		this.activo = true;
+	}
+
+	public String getContrasena() {
+		return contrasena;
+	}
+
+	public void setContrasena(String contrasena) {
+		this.contrasena = contrasena;
+	}
+
+	public void setDocumentoIdentidad(String documentoIdentidad) {
+		this.documentoIdentidad = documentoIdentidad;
+	}
+
+	public void setNombreCompleto(String nombreCompleto) {
+		this.nombreCompleto = nombreCompleto;
+	}
+
+	public void setCorreoElectronico(String correoElectronico) {
+		this.correoElectronico = correoElectronico;
+	}
+
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
+
+	public void setActivo(boolean activo) {
+		this.activo = activo;
 	}
 
 	// Getters

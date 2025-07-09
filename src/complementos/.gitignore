@@ -1,0 +1,9 @@
+/Excepciones$AutenticacionFallidaException.class
+/Excepciones$CuentaInactivaException.class
+/Excepciones$CuentaNoEncontradaException.class
+/Excepciones$DocumentoDuplicadoException.class
+/Excepciones$LimiteSobrepasadoException.class
+/Excepciones$MontoInvalidoException.class
+/Excepciones$SaldoInsuficienteException.class
+/Excepciones$UsuarioNoEncontradoException.class
+/Excepciones.class

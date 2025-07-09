@@ -1,5 +1,6 @@
 package kernel;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +13,8 @@ import complementos.Excepciones.LimiteSobrepasadoException;
 import complementos.Excepciones.MontoInvalidoException;
 import complementos.Excepciones.SaldoInsuficienteException;
 
-public class Cuenta {
+public class Cuenta implements Serializable{
+	private static final long serialVersionUID = 1L;
 	private final String numeroCuenta;
 	private final Usuario titular;
 	private double saldo;
@@ -27,6 +29,8 @@ public class Cuenta {
 		this.movimientos = new ArrayList<>();
 		this.activa = true;
 	}
+
+
 
 	public String getNumeroCuenta() {
 		return numeroCuenta;
@@ -181,6 +185,10 @@ public class Cuenta {
 			return false;
 		Cuenta cuenta = (Cuenta) o;
 		return numeroCuenta.equals(cuenta.numeroCuenta);
+	}
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
 	}
 
 	@Override
