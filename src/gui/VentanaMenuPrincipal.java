@@ -149,7 +149,7 @@ public class VentanaMenuPrincipal extends JFrame {
 																btnHistorial.setBackground(new Color(128, 255, 128));
 																btnHistorial.setIcon(registro);
 																btnHistorial.addActionListener(e -> {
-																	new VentanaRetiro(sistema, cuenta).setVisible(true);
+																	new VentanaHistorial(sistema, cuenta).setVisible(true);
 																	dispose();
 																});
 																
